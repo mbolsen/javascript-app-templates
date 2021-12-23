@@ -1,0 +1,17 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "baseline react template to start projects from. Server and Tests included.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "template",
+    "express",
+    "server"
+  ],
+  "author": "Matt Olsen",
+  "license": "ISC"
+}
