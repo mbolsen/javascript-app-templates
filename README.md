@@ -19,3 +19,8 @@ TODO:
 
 Initialize with:
 git init <directory> --template=<template_directory>
+
+Branches
+main - everything
+filestructure - A basic file structure for an app.  Express server included.
+react-front-end
