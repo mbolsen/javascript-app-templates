@@ -4,6 +4,7 @@
   "description": "baseline react template to start projects from. Server and Tests included.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon backend/server/index.js",
     "test": "test"
   },
   "keywords": [

@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 
 //---IMPORT COMPONENTS---
-import Header from './components/header/Header';
+import Header from './header/Header';
 
 //---CREATE CONTEXT---
 export const AppContext = React.createContext();

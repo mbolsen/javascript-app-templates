@@ -16,7 +16,7 @@ router.get('/');
 //---WEB ROUTES---
 // this will load the file in this directory
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/dist/index.html'), err => {
+  res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'), err => {
     if (err) {
       res.status(500).send(err);
     }
