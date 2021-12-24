@@ -6,7 +6,7 @@ const app = express();
 
 //---INITIALIZE THE APP---
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../../client/dist')));
+app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
 //---ROUTES---
 //https://expressjs.com/en/guide/routing.html
