@@ -1,10 +1,9 @@
 // Import setup from test-utils file
 import { render, fireEvent, screen } from '../../utils/test-utils/test-utils.js';
-// Import anything that might be used in the components
 import React from 'react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
-import Header from '../header/Header.jsx';
+import Header from './Header.jsx';
 
 // Good example of testing - https://www.samdawson.dev/article/react-context-testing
 describe('<Header />', () => {
@@ -24,7 +23,7 @@ describe('<Header />', () => {
   });
 
   //Click to navigate/render a new component, then run tests with what is on the page now
-  // describe('Clicking Login changes pages', () => {
+  // describe('Clicking Text Button changes pages', () => {
   //   beforeEach(async () => {
   //     userEvent.click(screen.getByText('FILL_ME_IN'));
   //   });
