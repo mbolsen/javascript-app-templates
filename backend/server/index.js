@@ -4,13 +4,16 @@ const router = express.Router();
 
 const app = express();
 
+// Router
+var router = require('./routes/routes.js');
+
 //---INITIALIZE THE APP---
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 
 //---ROUTES---
 //https://expressjs.com/en/guide/routing.html
-app.get('/');
+app.get('/', router);
 router.get('/');
 
 //---WEB ROUTES---
