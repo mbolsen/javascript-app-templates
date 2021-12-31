@@ -1,45 +1,13 @@
+//This is a direct copy from a former project.  It needs to be cleaned up for the template.
+//these files shouldn't send anything back to the frontend, that should be done in the controllers
+
 const { Questions, Answers, Photos, ResultData, db } = require('../../database/');
-
-const postPhotos = (answer_id, photos, questionId, answer) => {
-  let info = {};
-  let answerObj = answer;
-  Photos.findOne().sort('-_id').exec((err, item) => {
-
-    photoId = item._id
-    photos.map((item, index) => {
-      //create photo object
-      info = {
-        _id: photoId + index + 1,
-        answer_id: answer_id,
-        url: item
-      }
-
-      //add each photo to the Answer object
-      if (!answerObj.photos) {
-        answerObj.photos = [];
-      }
-      answerObj.photos.push(info)
-
-      //insert each photo into the Photos db
-      const document = new Photos(info)
-      document.save((err, doc) => {
-        if (err) {
-          console.log('error', err);
-        } else {
-          console.log('success on saving to the photos DB:', doc)
-        }
-      })
-    })
-
-    // insert the new answer and photos into the resultData collection
-    //db.collection('resultData').updateOne({ "_id": questionId }, { $push: { "answers":  answerObj }})
-  })
-}
 
 module.exports = {
   postQuestion: function(req, res) {
   console.log('incomming post request', req.body)
   let info = {};
+  //This is a read query
   Questions.findOne().sort('-_id').exec((err, item) => {
     info = {
       _id: item._id + 1,
@@ -62,17 +30,15 @@ module.exports = {
       }
     })
 
-    //insert the new question into the resultData db
-    //db.collection('resultData').insertOne(info)
-
-    //send response to the client
-    res.send(`${item._id}`)
+    //send response to the controller
+    return item._id;
   })
   },
   
   postAnswer: function(req, res) {
   console.log('incomming post answer request', req.body, parseInt(req.params.question_id))
-  let info = {};
+    let info = {};
+    //Read Query
     Answers.findOne().sort('-_id').exec((err, item) => {
       // console.log('maxAnswerId', item._id)
       info = {
@@ -92,14 +58,12 @@ module.exports = {
         if (err) {
           console.log('error', err);
         } else {
-          console.log('success on saving to the DB:', doc)
+          console.log('success on saving to the DB:', doc);
         }
       })
-      
-      //send new answer to photos, which will be saved to the resultData collection
-      postPhotos(info._id, req.body.photos, info.question_id, info)
-      //send response to client
-      res.send(`done`)
+
+      //send response to controller
+      return 'done';
     })
   }
 }
