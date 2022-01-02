@@ -3,15 +3,15 @@ const { Schema } = mongoose; //new
 const { answersWithPhotos, questionsWithAnswers } = require('../server/controllers/aggregates')
 
 //Connect to Mongo database
+
 //connect to mongo on localhost
-// const db = mongoose.createConnection()
 // const connectToDB = async function () {
-//   await db.openUri('mongodb://18.118.134.237:27017/sdc-questions')
+//   await db.openUri('mongodb://localhost:27017/sdc-questions')
 // }
-// connectToDB()
-mongoose.connect('mongodb://sdc-mongo:27017/sdc-questions', { family: 4 })
+mongoose.connect('mongodb://localhost:27017/templateDB')
+// mongoose.connect('mongodb://sdc-mongo:27017/sdc-questions', { family: 4 })
 // { useNewUrlParser: true, useUnifiedTopology: true }
-//connect to mongo on heroku (not set up, need to set up for aws)
+// connect to mongo on heroku
 // mongoose.connect(process.env.MONGODB_URI);
 var db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error:'))

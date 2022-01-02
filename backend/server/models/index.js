@@ -1,1 +1,1 @@
-exports.messages = require('./templateMessages.js');
+exports.templateMessages = require('./templateMessages.js');

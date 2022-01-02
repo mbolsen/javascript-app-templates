@@ -1,7 +1,12 @@
 var mysql = require('mysql2');
 // const API_URL = 'http://127.0.0.1:3000/classes';
 
-const dbConnection = mysql.createConnection({user: 'root', password: '', database: 'chat', });
+const dbConnection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  // password: '',
+  database: 'chat',
+});
 
 dbConnection.connect((err) => {
   if (err) {
@@ -11,4 +16,5 @@ dbConnection.connect((err) => {
   }
 });
 
-module.exports = mySQLConnection;
+module.exports = dbConnection;
+

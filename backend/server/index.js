@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const router = express.Router();
+// const router = express.Router();
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 //---ROUTES---
 //https://expressjs.com/en/guide/routing.html
 app.get('/', router);
-router.get('/');
+// router.get('/');
 
 //---WEB ROUTES---
 // this will load the file in this directory
