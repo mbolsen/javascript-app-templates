@@ -2,7 +2,7 @@
 This is a simple template that can be used for working with JS React projects.  
 
 
-##Includes:
+## Includes:
   * React w/ hooks front end
   * React Router
   * React-Testing Library with Jest
@@ -13,16 +13,16 @@ This is a simple template that can be used for working with JS React projects.
   * Postgres connection
   * MySQL connection
 
-##TODO: 
+## TODO: 
   * Backend testing with Mocha & Chai
   * PassportJS example
   * Add new testing libraries to compare between them
 
-##Use as a template
+## Use as a template
 Use this as a template with:
   * git init <directory> --template=<template_directory>
 
-##Branches
+## Branches
 It is best to work just from the main branch.  I don't have the branches completely split, because there is interaction between everything.
   *main - everything
   *filestructure - A basic file structure for an app.  Express server included.
