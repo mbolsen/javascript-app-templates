@@ -23,9 +23,9 @@ Use this as a template with:
   * git init <directory> --template=<template_directory>
 
 ## Branches
-It is best to work just from the main branch.  I don't have the branches completely split, because there is interaction between everything.
-  *main - everything
-  *filestructure - A basic file structure for an app.  Express server included.
-  *react-front-end - component set up, React testing library and jest testing set up
-  *server - MVC framework, backend testing
-  *database-connection - Database connections set up and an example with example CRUD operations
+* It is best to work just from the main branch.  I don't have the branches completely split, because there is interaction between everything.
+  * main - everything
+  * filestructure - A basic file structure for an app.  Express server included.
+  * react-front-end - component set up, React testing library and jest testing set up
+  * server - MVC framework, backend testing
+  * database-connection - Database connections set up and an example with example CRUD operations
