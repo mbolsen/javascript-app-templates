@@ -1,5 +1,6 @@
 //This is a direct copy from a former project.  It needs to be cleaned up for the template.
 //these files shouldn't send anything back to the frontend, that should be done in the controllers
+//Know about injections - https://docs.mongodb.com/manual/faq/fundamentals/#:~:text=or%20Query%20injection%3F-,%C2%B6,-BSON
 
 const { Questions, Answers, Photos, ResultData, db } = require('../../database/');
 

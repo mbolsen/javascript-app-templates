@@ -1,4 +1,5 @@
 //import postgres connection
+//!!!---remember to look up safeety measures for injection attacks---!!!  The examples here are safe, but still be aware!
 const postgres = require('../../database/postgres')
 
 //---INSERT---
