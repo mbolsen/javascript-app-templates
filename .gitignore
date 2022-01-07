@@ -7,6 +7,7 @@ node_modules
 .nyc_output
 .vscode
 .coveralls.yml
+coverage
 
 # Executables
 *.swf
