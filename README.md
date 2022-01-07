@@ -29,3 +29,5 @@ Use this as a template with:
   * react-front-end - component set up, React testing library and jest testing set up
   * server - MVC framework, backend testing
   * database-connection - Database connections set up and an example with example CRUD operations
+
+[![Coverage Status](https://coveralls.io/repos/github/mbolsen/javascript-app-templates/badge.svg)](https://coveralls.io/github/mbolsen/javascript-app-templates)

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose; //new
-const { answersWithPhotos, questionsWithAnswers } = require('../server/controllers/aggregates')
+// const { answersWithPhotos, questionsWithAnswers } = require('../server/controllers/aggregates')
 
 //Connect to Mongo database
 
