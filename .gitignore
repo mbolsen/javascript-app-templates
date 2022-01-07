@@ -4,6 +4,9 @@ bundle.js
 
 # Other files and folders
 node_modules
+.nyc_output
+.vscode
+.coveralls.yml
 
 # Executables
 *.swf
