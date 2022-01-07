@@ -51,24 +51,24 @@ describe('MySQL', function () {
   })
 
   //These tests will use the mocking of sinon
-  // describe('MOCK MySQL Connection tests', function () {
-  //   //mocking is better than using the real database, because you won't 'mess' with real data
-  //   it('Should mock putting some data in', function () {
-  //     mock.expects('createConnection').returns({
-  //       connect: () => {
-  //         console.log('Connected to MySQL Database')
-  //       },
-  //       query: (query, vars, callback) => {
-  //         callback(null, successfulDBinsert);
-  //       },
-  //       end: () => {
-  //         console.log('Connection ended');
-  //       }
-  //     })
-  //     mock.verify();
-  //     mock.expects('query').with('SELECT name FROM users;').yields(null, rows);
-  //     mock.restore();
-  //     done();
-  //   })
-  // })
+  describe('MOCK MySQL Connection tests', function () {
+    //mocking is better than using the real database, because you won't 'mess' with real data
+    it('Should mock putting some data in', function () {
+      mock.expects('createConnection').returns({
+        connect: () => {
+          console.log('Connected to MySQL Database')
+        },
+        query: (query, vars, callback) => {
+          callback(null, successfulDBinsert);
+        },
+        end: () => {
+          console.log('Connection ended');
+        }
+      })
+      mock.verify();
+      mock.expects('query').with('SELECT name FROM users;').yields(null, rows);
+      mock.restore();
+      done();
+    })
+  })
 })
