@@ -1,5 +1,6 @@
 # Build and Release Folders
 bundle.js
+package-lock.json
 **.env
 
 # Other files and folders
