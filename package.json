@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon backend/server/index.js",
-    "test-front": "jest",
+    "test-front": "jest ./frontend",
     "test-server": "./node_modules/mocha/bin/mocha backend/test/ --recursive --exit",
     "coverage": "nyc npm run test-server && nyc report --reporter=text-lcov --reporter=lcov | node ./node_modules/coveralls/bin/coveralls.js --verbose",
     "build": "webpack --config ./webpack.config.js --mode development -w"

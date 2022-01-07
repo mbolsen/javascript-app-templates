@@ -51,7 +51,6 @@ describe('MySQL Tests', function () {
             return;
           } 
           expect(result.config.database).to.equal('chat');
-          // resolve('done');
           dbConnection.connect(done)
         })
       })

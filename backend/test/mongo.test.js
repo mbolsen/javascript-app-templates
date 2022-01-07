@@ -3,10 +3,7 @@ const assert = require('assert');
 const sinon = require('sinon');
 require('mocha-sinon');
 // const { db } = require('../database/mongo');
-//MySQL
-const dbConnection = require('../database/mysql');
-// const mock = sinon.mock(require('mysql2'))
-var mysql = require('mysql2');
+
 //Chai
 const chai = require('chai');
 const expect = chai.expect;
