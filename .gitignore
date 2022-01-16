@@ -1,9 +1,14 @@
 # Build and Release Folders
 bundle.js
+package-lock.json
 **.env
 
 # Other files and folders
 node_modules
+.nyc_output
+.vscode
+.coveralls.yml
+coverage
 
 # Executables
 *.swf
